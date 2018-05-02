@@ -1,0 +1,7 @@
+<div class="side-form">
+  <div class="slide-container">
+    <span class="glyphicon glyphicon-remove close" routerLink="/admin/cities"></span>
+    <h3 translate>Editer ville</h3>
+    <app-city-form *ngIf="city" [city]="city" [pending]="pending" (submitForm)="update($event)"></app-city-form>
+  </div>
+</div>

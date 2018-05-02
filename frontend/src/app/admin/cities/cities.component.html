@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <button class="btn btn-info" routerLink="add">Ajouter une ville</button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Liste des ville</h4>
+      <div *ngFor="let city of cities" class="col-md-4">
+        <div class="city">
+          {{ city.name }}
+          <span class="pull-right">
+            <span class="glyphicon glyphicon-pencil" [routerLink]="['edit', city.id]"></span>
+            <span class="glyphicon glyphicon-remove-circle" (click)="remove(city)"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="view-side-form">
+    <router-outlet></router-outlet>
+  </div>
+</div>

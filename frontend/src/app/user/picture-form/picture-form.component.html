@@ -1,0 +1,12 @@
+<div class="col-md-3">
+  <div class="text-center">
+    <div class="picture">
+      <img [src]="picture ? (picture | storage) : '//placehold.it/240'" alt="avatar" [class.pending]="pending">
+    </div>
+    <h6 translate>profile.upload_picture</h6>
+    <form [formGroup]="form" (ngSubmit)="upload()">
+      <input type="file" class="form-control" #fileInput (change)="onFileChange()" accept="image/jpeg">
+      <button class="btn btn-info" [disabled]="form.invalid" translate>profile.submit</button>
+    </form>
+  </div>
+</div>

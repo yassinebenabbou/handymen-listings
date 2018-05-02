@@ -1,0 +1,11 @@
+<star-rating-comp   [starType]="'svg'"
+                    [rating]="rating"
+                    (onClick)="onClick($event)"
+                    [showHalfStars]="true"
+                    [readOnly]="!canRate || readOnly"
+                    [size]="size"
+                    [hoverEnabled]="canRate && !readOnly"
+                    [direction]="'dir' | translate"
+                    >
+</star-rating-comp>
+<span class="total" *ngIf="!readOnly">({{ total}})</span>

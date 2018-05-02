@@ -1,0 +1,33 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" align="center">
+        <app-search-form [service]="service" [city]="city" [services]="services" [cities]="cities"></app-search-form>
+      </div>
+    </div>
+    <div class="pending" *ngIf="!results"></div>
+    <div *ngIf="results">
+      <div class="row">
+        <div class="content">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="pull-right">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-filter" [routerLink]="['/search', city, service]" [queryParams]="{type: 'particulier'}" translate>search.freelancer</button>
+                    <button type="button" class="btn btn-warning btn-filter" [routerLink]="['/search', city, service]" [queryParams]="{type: 'societe'}" translate>search.company</button>
+                    <button type="button" class="btn btn-default btn-filter" [routerLink]="['/search', city, service]" translate>search.all</button>
+                  </div>
+                </div>
+              </div>
+              <div class="total" *ngIf="!results.data.length" translate>
+                search.no_results
+              </div>
+              <app-search-results [results]="results" [city]="city" [service]="service"></app-search-results>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

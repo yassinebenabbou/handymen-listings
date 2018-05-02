@@ -1,0 +1,83 @@
+{
+  "dir": "ltr",
+  "city": "{{name}}",
+  "service": "{{name}}",
+  "navbar": {
+    "home": "Acceuil",
+    "contact": "Contactez nous",
+    "login": "Connexion",
+    "register": "Inscription",
+    "profile": "Profil",
+    "logout": "Déconnexion"
+  },
+  "home": {
+    "slogan": "Trouvez ce qui vous rends service en un seul clique!",
+    "search": "Recherche",
+    "city": "Choisissez une ville",
+    "service": "Choisissez un service",
+    "all_cities": "Toutes les villes",
+    "all_services": "Tous les services"
+  },
+  "register": {
+    "email": "Votre adresse e-mail",
+    "password": "Mot de passe",
+    "password_confirm": "Confirmez votre mot de passe",
+    "freelancer": "Vous offrez des services en tant que Particulier",
+    "company": "Vous offrez des services en tant que Société",
+    "user": "Vous cherchez des services",
+    "register": "S'inscrire",
+    "submit": "Valider"
+  },
+  "login": {
+    "connect": "connexion",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "login": "Se connecter",
+    "forgot_password": "Mot de passe oublié",
+    "facebook": "Se connecter avec Facebook",
+    "google": "Se connecter avec Google"
+  },
+  "form": {
+    "email_not_valid": "Entrez une adresse email valide",
+    "email_required": "L'adresse email est obligatoire",
+    "password_required": "Mot de passe obligatoire",
+    "password_min": "Au moins 6 caractères",
+    "password_not_confirmed": "Vous avez entrez un mot de passe différent",
+    "invalid_credentials": "Email / Mot de passe érroné !",
+    "email_taken": "Cette adresse email n'est pas disponible"
+  },
+  "profile": {
+    "full_name": "Nom & prénom",
+    "company_name": "Nom de la société",
+    "services": "Vos services",
+    "city": "Ville",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "gender": "Sexe",
+    "male": "Homme",
+    "female": "Femme",
+    "CIN": "CIN",
+    "CAE": "CAE",
+    "submit": "Valider",
+    "manage_services": "Manager vos services",
+    "upload_picture": "Votre photo de profil",
+    "upload": "Télécharger",
+    "profile": "Votre profil",
+    "infos": "Informations générales",
+    "incomplete": "Vous devez complétez votre profil pour apparaître dans les recherches.",
+    "change_status": "Changer votre status"
+  },
+  "services": {
+    "your_services": "Vos services",
+    "service": "Service",
+    "other_service": "Autre service",
+    "add": "Ajouter",
+    "disclaimer": "Les services non cités dans la liste doivent être confirmés par un modérateur"
+  },
+  "search": {
+    "no_results": "Aucun résultat trouvé",
+    "freelancer": "Particulier",
+    "company": "Société",
+    "all": "Tous"
+  }
+}

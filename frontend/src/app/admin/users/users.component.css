@@ -1,0 +1,28 @@
+.user {
+  display: block;
+  padding: 6px;
+  border-radius: 4px;
+}
+.user:hover{
+  background-color: #eee;
+}
+
+.user > small {
+  color: #6d6d6d;
+}
+
+span.glyphicon {
+  padding: 3px 3px;
+  margin: 0 1px;
+  border-radius: 2px;
+  background-color: #222222;
+  color: white;
+  cursor: pointer;
+}
+
+span.glyphicon:hover {
+  background-color: #444;
+}
+
+
+

@@ -1,0 +1,36 @@
+<section>
+  <div class="container" align="center">
+    <md-card class="login-card">
+      <md-card-header>
+        <h2 translate>login.connect</h2>
+      </md-card-header>
+      <md-card-content>
+        <div class="loading" *ngIf="pending"></div>
+
+        <form [formGroup]="form" (ngSubmit)="login()" *ngIf="!pending">
+          <md-form-field>
+            <input mdInput type="email" placeholder="{{ 'login.email' | translate }}" formControlName="email">
+            <md-error *ngIf="form.get('email').hasError('email')" translate>
+              form.email_not_valid
+            </md-error>
+            <md-error *ngIf="form.get('email').hasError('required')" translate>
+              form.email_required
+            </md-error>
+          </md-form-field>
+          <md-form-field>
+            <input mdInput type="password" placeholder="{{ 'login.password' | translate }}" formControlName="password">
+            <md-error *ngIf="form.get('password').hasError('required')" translate>
+              form.password_required
+            </md-error>
+          </md-form-field>
+          <md-error *ngIf="invalidCredentials" translate>
+            form.invalid_credentials
+          </md-error>
+          <button md-raised-button color="primary" id="login" [disabled]="form.invalid ">{{ 'login.login' | translate }}</button>
+          <button md-raised-button color="basic" id="forgotpwd" (click)="$event.preventDefault()">{{ 'login.forgot_password' | translate }}</button>
+        </form>
+        <app-social (pending)="setPending()" *ngIf="!pending"></app-social>
+      </md-card-content>
+    </md-card>
+  </div>
+</section>

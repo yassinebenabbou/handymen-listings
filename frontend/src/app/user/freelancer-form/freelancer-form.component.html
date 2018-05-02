@@ -1,0 +1,81 @@
+<div class="container">
+  <h1 translate>profile.profile</h1>
+  <hr>
+  <div class="row">
+    <app-picture-form [picture]="picture"></app-picture-form>
+
+    <div class="col-md-9 personal-info">
+      <div class="alert alert-danger alert-dismissable" *ngIf="!profileExists">
+        <a class="panel-close close" data-dismiss="alert">×</a>
+        <i class="fa fa-coffee"></i>
+        <span translate>profile.incomplete</span>
+      </div>
+
+      <button routerLink="services" class="btn btn-lg btn-danger services-button" translate>profile.manage_services</button>
+      <button routerLink="/change-status" class="btn btn-lg btn-warning services-button" translate>profile.change_status</button>
+      <h3 translate>profile.infos</h3>
+
+      <form class="form-horizontal" role="form" [formGroup]="form" (ngSubmit)="updateProfile()">
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.full_name</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" name="full_name" formControlName="full_name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.city</label>
+          <div class="col-lg-8">
+            <div class="ui-select">
+              <select id="city" name="city" class="form-control" formControlName="city_slug">
+                <option *ngFor="let city of cities" [value]="city.slug">{{ 'city' | translate:city }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.address</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" name="address" formControlName="address">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.phone</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" name="phone" formControlName="phone">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.gender</label>
+          <div class="col-lg-8">
+            <label class="radio-inline" translate><input type="radio" name="gender" value="m" formControlName="gender">profile.male</label>
+            <label class="radio-inline" translate><input type="radio" name="gender" value="f" formControlName="gender">profile.female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.CIN</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" name="CIN" formControlName="CIN">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>profile.CAE</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" name="CAE" formControlName="CAE">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <button class="btn btn-info" [disabled]="form.invalid" translate>profile.submit</button>
+            <span class="loading" *ngIf="pending"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="view-side-form">
+  <router-outlet></router-outlet>
+</div>
+

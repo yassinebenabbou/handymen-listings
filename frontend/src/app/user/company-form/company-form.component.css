@@ -1,0 +1,18 @@
+.loading {
+  content: '';
+  display: inline-block;
+  margin: 0 4px -4px 0;
+  width: 16px;
+  height: 16px;
+  background: url('../../../assets/pending.gif');
+}
+
+@media(max-width:768px) {
+  button {
+    margin-top: 10px;
+  }
+
+  .services-button {
+    width: 100%;
+  }
+}

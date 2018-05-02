@@ -1,0 +1,5 @@
+<section [ngSwitch]="usergroup">
+  <app-freelancer-form *ngSwitchCase="usergroups.freelancer" [cities]="cities"></app-freelancer-form>
+  <app-company-form *ngSwitchCase="usergroups.company" [cities]="cities"></app-company-form>
+  <app-user-form *ngSwitchCase="usergroups.user" [cities]="cities"></app-user-form>
+</section>

@@ -1,0 +1,144 @@
+.flag-ma {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+  cursor: pointer;
+  background-image: url('../../assets/Morocco.png');
+}
+
+.flag-fr {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+  cursor: pointer;
+  background-image: url('../../assets/France.png');
+}
+
+.navbar-default {
+  border-color: transparent;
+  background-color: #222;
+}
+
+.navbar-default .navbar-brand {
+  font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+  color: #6ca2b5;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+  color: #fff;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #6ca2b5;
+  background-color: #6ca2b5;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #6ca2b5;
+}
+
+.navbar-default .nav li a {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 4px 4px;
+}
+
+.navbar-default .nav li a:hover {
+  outline: 0;
+  color: #6ca2b5;
+}
+
+.navbar-default .nav li a:focus {
+  outline: 0;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a {
+  border-radius: 0;
+  color: #fff;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  color: #fff;
+  background-color: #17d0d5;
+}
+
+@media(min-width:768px) {
+  .navbar-default {
+    padding: 25px 0;
+    border: 0;
+    background-color: transparent;
+    -webkit-transition: padding .3s;
+    -moz-transition: padding .3s;
+    transition: padding .3s;
+  }
+
+  .navbar-default .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+  }
+
+  .navbar-default .navbar-nav>.active>a {
+    border-radius: 3px;
+  }
+
+  .navbar-default.navbar-shrink {
+    padding: 10px 0;
+    background-color: #222;
+  }
+
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+
+#register, #logout {
+  background-color: rgba(79, 202, 206, 0.7);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#login, #profile {
+  background-color: rgba(236, 242, 75, 0.6);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+#login:hover, #profile:hover {
+  background-color: rgba(236, 242, 75, 0.8);
+  color: white;
+}
+
+#register:hover, #logout:hover {
+  background-color: rgba(79, 202, 206, 1);
+  color: white;
+}
+
+#login:visited, #register:visited, #logout:visited, #profile:visited {
+  color:white;
+}

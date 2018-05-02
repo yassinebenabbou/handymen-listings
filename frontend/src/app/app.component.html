@@ -1,0 +1,7 @@
+<app-navbar (switchLanguage)="switchLanguage($event)" [class.rtl]="('dir' | translate) === 'rtl'"></app-navbar>
+<div dir="{{ 'dir' | translate }}" [class.rtl]="('dir' | translate) === 'rtl'">
+  <router-outlet></router-outlet>
+</div>
+
+
+

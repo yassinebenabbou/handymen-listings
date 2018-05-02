@@ -1,0 +1,8 @@
+.loading {
+  content: '';
+  display: inline-block;
+  margin: 0 4px -4px 0;
+  width: 16px;
+  height: 16px;
+  background: url('../../../assets/pending.gif');
+}

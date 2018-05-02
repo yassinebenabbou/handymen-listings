@@ -1,0 +1,7 @@
+<div class="side-form">
+  <div class="slide-container">
+    <span class="glyphicon glyphicon-remove close" routerLink="/admin/services"></span>
+    <h3 translate>Ajouter un service</h3>
+    <app-service-form [pending]="pending" (submitForm)="create($event)"></app-service-form>
+  </div>
+</div>

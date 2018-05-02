@@ -1,0 +1,42 @@
+<div class="side-form">
+   <div class="slide-container">
+     <span class="glyphicon glyphicon-remove close" routerLink="/admin/users"></span>
+     <h3>Profil</h3>
+      <div class="container" *ngIf="user">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="">
+              <div class="row">
+                <div class="col-sm-4 col-md-3" align="center">
+                  <img [src]="user.picture | storage" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-8 col- md-9">
+                  <h4>
+                    {{ user.profile.full_name || user.profile.name }}
+                    <app-rating [user]="user"  [size]="'medium'" [readOnly]="false"></app-rating>
+                  </h4>
+                  <small>
+                    <span *ngIf="user.profile.address">{{ user.profile.address + ', '}}</span>
+                    <span translate [translateParams]="user.city">city<i class="glyphicon glyphicon-map-marker"></i></span>
+                  </small>
+                  <p>
+                      <span *ngFor="let service of user.services" class="label label-default">
+                        {{ 'service' | translate:service }}
+                      </span>
+                  </p>
+                  <p>
+                    <i class="glyphicon glyphicon-envelope"></i>{{ user.email }}
+                    <br />
+                    <i class="glyphicon glyphicon-phone"></i>{{ user.profile.phone }}
+                    <br />
+                    <i class="glyphicon glyphicon-home"></i>{{ user.profile.address }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+

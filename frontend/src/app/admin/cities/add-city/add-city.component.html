@@ -1,0 +1,7 @@
+<div class="side-form">
+  <div class="slide-container">
+    <span class="glyphicon glyphicon-remove close" routerLink="/admin/cities"></span>
+    <h3 translate>Ajouter ville</h3>
+    <app-city-form [pending]="pending" (submitForm)="create($event)"></app-city-form>
+  </div>
+</div>

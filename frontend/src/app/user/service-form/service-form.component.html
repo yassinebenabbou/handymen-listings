@@ -1,0 +1,45 @@
+<div class="side-form" >
+  <div class="slide-container">
+      <span class="glyphicon glyphicon-remove close" routerLink="/edit-profile"></span>
+    <h3 translate>services.your_services</h3>
+    <div class="form-container">
+      <form class="form-horizontal" role="form" [formGroup]="serviceForm" (ngSubmit)="attachService()">
+        <div class="form-group">
+          <label class="col-lg-3 control-label" translate>services.service</label>
+          <div class="col-lg-5">
+            <div class="ui-select">
+              <select id="service" name="service_id" class="form-control" formControlName="service_id">
+                <option *ngFor="let service of services" [value]="service.id">{{ 'service' | translate:service }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-1">
+            <button class="btn btn-info" [disabled]="serviceForm.invalid" translate>services.add</button>
+          </div>
+        </div>
+      </form>
+
+      <form class="form-horizontal" role="form" [formGroup]="newServiceForm" (ngSubmit)="attachNewService()">
+        <div class="form-group has-warning">
+          <label class="col-lg-3 control-label" translate>services.other_service</label>
+          <div class="col-lg-5">
+            <input class="form-control" type="text" name="service_name" value="" formControlName="service_name">
+            <span class="help-block"><small translate>services.disclaimer</small></span>
+          </div>
+          <div class="col-lg-3">
+            <button class="btn btn-info" [disabled]="newServiceForm.invalid" translate>services.add</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row services" *ngFor="let service of currentServices; trackBy: trackService">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-5">
+        <span class="glyphicon glyphicon-trash delete" (click)="detachService(service)"></span>
+        <span class="service" [class.pending]="!service.confirmed">{{ 'service' | translate:service }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+

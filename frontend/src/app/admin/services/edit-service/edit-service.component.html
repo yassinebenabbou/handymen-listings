@@ -1,0 +1,8 @@
+<script src="edit-service.component.ts"></script>
+<div class="side-form">
+  <div class="slide-container">
+    <span class="glyphicon glyphicon-remove close" routerLink="/admin/services"></span>
+    <h3 translate>Editer service</h3>
+    <app-service-form *ngIf="service" [service]="service" [pending]="pending" (submitForm)="update($event)"></app-service-form>
+  </div>
+</div>

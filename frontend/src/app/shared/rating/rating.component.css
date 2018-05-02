@@ -1,0 +1,11 @@
+.rating {
+  justify-content: flex-start;
+}
+
+star-rating-comp {
+  display: inline-block;
+}
+.total {
+  font-size: 60%;
+  text-transform: lowercase;
+}

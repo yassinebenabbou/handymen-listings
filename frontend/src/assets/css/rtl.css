@@ -1,0 +1,79 @@
+
+.rtl *[translate], .rtl button[md-raised-button], .rtl span.service, .rtl select, .rtl md-select, md-option.mat-option.right, .rtl md-form-field, .rtl table, .rtl h4 > span, .rtl p > span {
+  font-family: Changa,Tahoma,sans-serif !important;
+}
+
+.rtl md-error{
+  line-height: 130%;
+}
+
+
+.rtl li * {
+  text-align: right !important;
+}
+
+.rtl h4 > span {
+  font-size: 14px !important;
+}
+
+.rtl .pull-left {
+  float: right !important;
+  padding-left: 10px;;
+  padding-right: 0;
+}
+
+.rtl .pull-right {
+  float: left !important;
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.rtl .col-xs-1, .rtl .col-xs-2, .rtl .col-xs-3, .rtl .col-xs-4, .rtl .col-xs-5, .rtl .col-xs-6, .rtl .col-xs-7, .rtl .col-xs-8, .rtl .col-xs-9, .rtl .col-xs-10, .rtl .col-xs-11, .rtl .col-xs-12 {
+  float: right;
+}
+.rtl .control-label {
+  text-align: left;
+}
+
+.rtl .radio-inline {
+  margin-right: 20px;
+}
+
+.rtl .radio-inline input{
+  margin-right: -20px;
+
+}
+
+@media (min-width: 768px) {
+  .rtl .col-sm-1, .rtl .col-sm-2, .rtl .col-sm-3, .rtl .col-sm-4, .rtl .col-sm-5, .rtl .col-sm-6, .rtl .col-sm-7, .rtl .col-sm-8, .rtl .col-sm-9, .rtl .col-sm-10, .rtl .col-sm-11, .rtl .col-sm-12 {
+    float: right;
+  }
+  .rtl .control-label {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .rtl .col-md-1, .rtl .col-md-2, .rtl .col-md-3, .rtl .col-md-4, .rtl .col-md-5, .rtl .col-md-6, .rtl .col-md-7, .rtl .col-md-8, .rtl .col-md-9, .rtl .col-md-10, .rtl .col-md-11, .rtl .col-md-12 {
+    float: right;
+  }
+  .rtl .control-label {
+    text-align: left;
+  }
+}
+@media (min-width: 1170px) {
+  .rtl .col-lg-1, .rtl .col-lg-2, .rtl .col-lg-3, .rtl .col-lg-4, .rtl .col-lg-5, .rtl .col-lg-6, .rtl .col-lg-7, .rtl .col-lg-8, .rtl .col-lg-9, .rtl .col-lg-10, .rtl .col-lg-11, .rtl .col-lg-12 {
+    float: right;
+  }
+  .rtl .control-label {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rtl .col-lg-1, .rtl .col-lg-2, .rtl .col-lg-3, .rtl .col-lg-4, .rtl .col-lg-5, .rtl .col-lg-6, .rtl .col-lg-7, .rtl .col-lg-8, .rtl .col-lg-9, .rtl .col-lg-10, .rtl .col-lg-11, .rtl .col-lg-12 {
+    float: right;
+  }
+  .rtl .control-label {
+    text-align: left;
+  }
+}

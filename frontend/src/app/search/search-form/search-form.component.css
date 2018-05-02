@@ -1,0 +1,44 @@
+form {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+button {
+  margin: 20px 30px;
+  width: 200px;
+}
+
+select {
+  margin: 20px 30px;
+  width: 220px;
+  height: 50px !important;
+  font-size: 16px !important;
+}
+
+select > option {
+  font-size: 14px !important;
+}
+
+option {
+  padding: 10px;
+}
+
+
+@media(min-width:768px) {
+  form {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    padding: 0 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+  select {
+    width: 300px !important;
+  }
+  button {
+    width: 200px;
+  }
+}

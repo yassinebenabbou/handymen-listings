@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <button class="btn btn-info" routerLink="add">Ajouter un service</button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Services activés</h4>
+      <div *ngFor="let service of services" class="service">
+        {{ service.name }}
+        <span class="pull-right">
+          <span class="glyphicon glyphicon-pencil" [routerLink]="['edit', service.id]"></span>
+          <span class="glyphicon glyphicon-remove-circle" (click)="remove(service)"></span>
+        </span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Services non confirmés</h4>
+      <div *ngFor="let service of pendingServices" class="service">
+        {{ service.name }}
+        <span class="pull-right">
+          <span class="glyphicon glyphicon-pencil" [routerLink]="['edit', service.id]"></span>
+          <span class="glyphicon glyphicon-remove-circle" (click)="remove(service)"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="view-side-form">
+    <router-outlet></router-outlet>
+  </div>
+</div>

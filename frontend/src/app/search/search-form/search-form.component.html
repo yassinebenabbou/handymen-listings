@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="search()" class="form-inline">
+
+  <div class="form-group">
+      <div class="ui-select">
+        <select id="city" name="city" [(ngModel)]="service" class="form-control" formControlName="service" required>
+          <option value="" selected disabled hidden translate>home.service</option>
+          <option value="tous-les-services" translate>home.all_services</option>
+          <option *ngFor="let service of services" [value]="service.slug">{{ 'service' | translate:service }}</option>
+        </select>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="ui-select">
+        <select id="service" name="city" [(ngModel)]="city" class="form-control" formControlName="city">
+          <option value="" selected disabled hidden translate>home.city</option>
+          <option value="toutes-les-villes" translate>home.all_cities</option>
+          <option *ngFor="let city of cities" [value]="city.slug">{{ 'city' | translate:city }}</option>
+        </select>
+      </div>
+  </div>
+
+  <button class="btn btn-info" [disabled]="form.invalid" translate>home.search</button>
+
+</form>

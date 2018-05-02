@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Liste des ville</h4>
+      <div *ngFor="let user of users" class="col-md-6">
+        <div class="user">
+          {{ user.profile.name || user.profile.full_name }}
+          <small>({{ user.email }})</small>
+          <span class="pull-right">
+            <span class="glyphicon glyphicon-user" [routerLink]="['show', user.id]"></span>
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="view-side-form">
+    <router-outlet></router-outlet>
+  </div>
+</div>

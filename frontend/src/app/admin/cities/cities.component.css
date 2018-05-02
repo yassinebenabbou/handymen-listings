@@ -1,0 +1,22 @@
+.city {
+  display: block;
+  padding: 6px;
+  border-radius: 4px;
+}
+.city:hover{
+  background-color: #eee;
+}
+
+span.glyphicon {
+  padding: 3px 3px;
+  margin: 0 1px;
+  border-radius: 2px;
+  background-color: #222222;
+  color: white;
+  cursor: pointer;
+}
+
+span.glyphicon:hover {
+  background-color: #444;
+}
+

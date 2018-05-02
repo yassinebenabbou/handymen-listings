@@ -1,0 +1,47 @@
+<div class="table-container">
+  <table class="table table-filter" *ngFor="let user of results.data">
+    <tbody>
+    <tr>
+      <td>
+        <div class="media" [routerLink]="['/profile', user.id]">
+          <a href="#" class="pull-left">
+            <img [src]="(user.picture | storage) || '//placehold.it/35'" class="media-photo">
+          </a>
+          <div class="media-body">
+
+            <h4 class="title">
+              {{ user.profile.full_name || user.profile.name }}
+              <small><small translate>{{ 'search.' + usergroups[user.usergroup_id]}}</small></small>
+              <span class="pull-right city">{{ 'city' | translate:user.city }}</span>
+            </h4>
+
+            <p class="summary">
+              <span *ngFor="let service of user.services" class="label label-default">
+                {{ 'service' | translate:service }}
+              </span>
+            </p>
+            <app-rating [user]="user" [size]="'small'" [readOnly]="true"></app-rating>
+          </div>
+        </div>
+      </td>
+    </tbody>
+  </table>
+</div>
+
+<nav aria-label="navigation" *ngIf="results.total">
+  <div class="container text-center">
+    <ul class="pagination">
+      <li [class.disabled]="results.current_page === 1">
+        <a [routerLink]="['/search', city, service]" [queryParams]="{page: results.current_page - 1}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li *ngFor="let i of pages" [class.active]="i === results.current_page" ><a [routerLink]="['/search', city, service]" [queryParams]="{page: i}">{{i}}</a></li>
+      <li [class.disabled]="results.current_page === results.last_page">
+        <a [routerLink]="['/search', city, service]" [queryParams]="{page: results.current_page + 1}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

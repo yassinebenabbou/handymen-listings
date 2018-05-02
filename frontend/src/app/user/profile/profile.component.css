@@ -1,0 +1,25 @@
+.glyphicon {
+  margin: 10px;
+}
+
+
+app-rating {
+  display: inline-block;
+}
+small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999;
+}
+
+span.label {
+  font-weight: normal;
+  margin: 0 2px;
+  display: inline-block;
+}
+
+@media(min-width: 768px) {
+  span.label {
+    display: inline-block;
+  }
+}

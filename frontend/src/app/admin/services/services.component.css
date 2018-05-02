@@ -1,0 +1,21 @@
+.service {
+  display: block;
+  margin: 6px 0;
+}
+.service:nth-child(odd) {
+  background-color: #eee;
+}
+
+span.glyphicon {
+  padding: 3px 3px;
+  margin: 0 1px;
+  border-radius: 2px;
+  background-color: #222222;
+  color: white;
+  cursor: pointer;
+}
+
+span.glyphicon:hover {
+  background-color: #444;
+}
+

@@ -1,0 +1,14 @@
+.pending {
+  height: 128px;
+  width: 150px;
+  background: url('../../assets/auth-loading.gif');
+  background-position: center;
+  background-size: cover;
+  margin: 20px auto;
+}
+
+.total {
+  margin: 22px;
+}
+
+

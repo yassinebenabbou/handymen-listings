@@ -1,0 +1,44 @@
+.login-card {
+  width: 300px;
+}
+
+.loading {
+  height: 128px;
+  width: 150px;
+  background: url('../../../assets/auth-loading.gif');
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  margin-top: 10px;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Montserrat;
+}
+
+button#login {
+  background-color: #9b9f3b;
+}
+
+button#login[disabled] {
+  background-color: #eee;
+}
+
+@media(min-width:768px) {
+  .login-card {
+    width: 600px;
+  }
+  md-form-field {
+    display: block;
+    width: 300px;
+    margin: 20px;
+  }
+
+  button {
+    margin: 20px;
+  }
+}
+
+

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand page-scroll" routerLink="/">Serbis</a>
+      <span class="flag-ma" (click)="setLanguage('ar')"></span>
+      <span class="flag-fr" (click)="setLanguage('fr')"></span>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden active">
+          <a routerLink="/"></a>
+        </li>
+        <li class="">
+          <a class="page-scroll" id="acceuil" routerLink="/" translate>navbar.home</a>
+        </li>
+        <li class="">
+          <a class="page-scroll" id="contact" routerLink="/contact" translate>navbar.contact</a>
+        </li>
+        <li class="" *ngIf="!loggedIn">
+          <a class="page-scroll" id="login" routerLink="/login" translate>navbar.login</a>
+        </li>
+        <li class="" *ngIf="!loggedIn">
+          <a class="page-scroll" id="register" routerLink="/register" translate>navbar.register</a>
+        </li>
+        <li class="" *ngIf="loggedIn && !admin">
+          <a class="page-scroll" id="profile" routerLink="/edit-profile" translate>navbar.profile</a>
+        </li>
+        <li class="" *ngIf="loggedIn && admin">
+          <a class="page-scroll" id="admin" routerLink="/admin">Admin Area</a>
+        </li>
+        <li class="" *ngIf="loggedIn">
+          <a class="page-scroll" id="logout" (click)="logout()" translate>navbar.logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+

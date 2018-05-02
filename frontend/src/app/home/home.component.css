@@ -1,0 +1,57 @@
+header {
+  text-align: center;
+  color: #fff;
+  background-attachment: scroll;
+  background-image: url('../../assets/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+header .intro-text {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+header .intro-text .intro-lead-in {
+  margin-bottom: 25px;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+#register {
+  background-color: #f5f5f5;
+  padding: 10px 0 20px 0;
+}
+
+#register span {
+  display: block;
+  font-size: 30px;
+  padding: 10px 0;
+  color: #444444; /*96b216*/
+}
+
+#register button {
+}
+
+@media(min-width:768px) {
+  header {
+    height: 400px;
+  }
+  header .intro-text {
+    padding-top: 140px;
+  }
+
+  header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+  }
+}

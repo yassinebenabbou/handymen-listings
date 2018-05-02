@@ -1,0 +1,83 @@
+{
+  "dir": "rtl",
+  "city": "{{name_ar}}",
+  "service": "{{name_ar}}",
+  "navbar": {
+    "home": "الرئيسية",
+    "contact": "اتصل بنا",
+    "login": "تسجيل الدخول",
+    "register": "الاشتراك",
+    "profile": "البيانات الشخصية",
+    "logout": "تسجيل الخروج"
+  },
+  "home": {
+    "slogan": "البحث عن خدمة في مدينتك",
+    "search": "البحث",
+    "city": "المدينة",
+    "service": "نوع الخدمة",
+    "all_cities": "جميع المدن",
+    "all_services": "جميع الخدمات"
+  },
+  "register": {
+    "email": "البريد الالكتروني",
+    "password": "كلمة السر",
+    "password_confirm": "تأكيد كلمة السر",
+    "freelancer": "تقدم خدمة كمستقل",
+    "company": "تقدم خدمة كشركة",
+    "user": "تبحث عن خدمات",
+    "register": "الاشتراك",
+    "submit": "تأكيد"
+  },
+  "login": {
+    "connect": "تسجيل الدخول",
+    "email": "البريد الالكتروني",
+    "password": "كلمة السر",
+    "login": "الدخول",
+    "forgot_password": "نسيت كلمة السر",
+    "facebook": "التسجيل بحساب Facebook",
+    "google": "التسجيل بحساب Google"
+  },
+  "form": {
+    "email_not_valid": "المرجو ادخال بريد الكتروني صحيح",
+    "email_required": "يجب ادخال بريد الكتروني",
+    "password_required": "يجب ادخال كلمة سر",
+    "password_min": "6 حروف على الأقل",
+    "password_not_confirmed": "لقد قمتم بإدخال كلمة سر مختلفة",
+    "invalid_credentials": "البيانات غير صحيحة !",
+    "email_taken": "البريد الالكتروني غير متاح"
+  },
+  "profile": {
+    "full_name": "الاسم الكامل",
+    "company_name": "اسم الشركة",
+    "services": "خدماتك",
+    "city": "المدينة",
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "gender": "الجنس",
+    "male": "ذكر",
+    "female": "انثى",
+    "CIN": "رقم بطاقة التعريف الوطنية",
+    "CAE": "رقم",
+    "submit": "تحديث",
+    "manage_services": "تعديل وإضافة الخدمات",
+    "upload_picture": "إضافة صورة شخصية",
+    "upload": "تحميل",
+    "profile": "البيانات الشخصية",
+    "infos": "معلومات عامة",
+    "incomplete": "يجب إدخال جميع البيانات المطلوبة للظهور في البحث",
+    "change_status": "تغيير نوع الحساب"
+  },
+  "services": {
+    "your_services": "خدماتك",
+    "service": "خدمة",
+    "other_service": "خدمة اخرى",
+    "add": "اضف",
+    "disclaimer": "الخدمات الغير المتاحة في القائمة تخضع للرقابة قبل الظهور في ملفك الشخصي"
+  },
+  "search": {
+    "no_results": "لا يوجد اي نتائج",
+    "freelancer": "مستقل",
+    "company": "شركة",
+    "all": "الكل"
+  }
+}

@@ -1,0 +1,30 @@
+.services {
+  margin: 10px 0;
+}
+
+.service {
+  padding: 10px;
+}
+
+.pending {
+  color: gray;
+}
+
+.delete, .close {
+  cursor: pointer;
+}
+
+.close {
+  color: black;
+}
+
+.close:hover {
+  color: gray;
+}
+
+
+@media(max-width: 768px) {
+  input[type="submit"] {
+    margin-top: 10px;
+  }
+}

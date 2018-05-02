@@ -1,0 +1,64 @@
+<section>
+  <div class="container" align="center">
+    <md-card>
+      <md-card-header>
+        <h2 translate>register.register</h2>
+      </md-card-header>
+      <md-card-content>
+        <div class="loading" *ngIf="pending"></div>
+
+        <form [formGroup]="form" (ngSubmit)="register()" *ngIf="!pending">
+          <md-form-field>
+            <label for="email" translate>register.email</label>
+            <input mdInput type="email" id="email" formControlName="email">
+            <md-error *ngIf="form.get('email').hasError('email')" translate>
+              form.email_not_valid
+            </md-error>
+            <md-error *ngIf="form.get('email').hasError('required')" translate>
+              form.email_required
+            </md-error>
+            <md-error *ngIf="form.get('email').hasError('taken')" translate>
+              form.email_taken
+            </md-error>
+            <md-icon mdSuffix class="pending" *ngIf="form.get('email').pending"></md-icon>
+          </md-form-field>
+          <md-form-field>
+            <label for="password" translate>register.password</label>
+            <input mdInput type="password" id="password" formControlName="password">
+            <md-error *ngIf="form.get('password').hasError('required')" translate>
+              form.password_required
+            </md-error>
+            <md-error *ngIf="form.get('password').hasError('minlength')" translate>
+              form.password_min
+            </md-error>
+          </md-form-field>
+          <md-form-field>
+            <label for="passwordConfirmation" translate>register.password_confirm</label>
+            <input mdInput type="password" id="passwordConfirmation" formControlName="password_confirmation">
+            <md-error *ngIf="form.get('password_confirmation').hasError('confirmed')" translate>
+              form.password_not_confirmed
+            </md-error>
+          </md-form-field>
+          <md-radio-group id="usergroup" class="radio-group" formControlName="usergroup_id">
+            <div class="first-group">
+              <md-radio-button value="3"> </md-radio-button>
+              <div id="freelancer-label" translate>register.freelancer</div>
+            </div>
+            <div class="second-group">
+              <md-radio-button value="4"></md-radio-button>
+              <div id="company-label" translate>register.company</div>
+            </div>
+            <div class="third-group">
+              <md-radio-button value="2"></md-radio-button>
+              <div id="user-label" translate>register.user</div>
+            </div>
+            <md-error *ngIf="form.get('usergroup_id').hasError('required')">
+            </md-error>
+          </md-radio-group>
+          <button md-raised-button color="primary" id="register" type="submit" [disabled]="this.form.invalid">{{ 'register.register' | translate }}</button>
+        </form>
+        <app-social (pending)="setPending()" *ngIf="!pending"></app-social>
+      </md-card-content>
+    </md-card>
+  </div>
+</section>

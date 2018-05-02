@@ -1,0 +1,29 @@
+<section>
+  <div class="container" align="center">
+    <md-card>
+      <md-card-header>
+      </md-card-header>
+      <md-card-content>
+        <form [formGroup]="form" (ngSubmit)="complete()">
+          <md-radio-group id="usergroup" class="radio-group" formControlName="usergroup_id">
+            <div class="first-group">
+              <md-radio-button value="3"> </md-radio-button>
+              <div id="freelancer-label" translate>register.freelancer</div>
+            </div>
+            <div class="second-group">
+              <md-radio-button value="4"></md-radio-button>
+              <div id="company-label" translate>register.company</div>
+            </div>
+            <div class="third-group">
+              <md-radio-button value="2"></md-radio-button>
+              <div id="user-label" translate>register.user</div>
+            </div>
+            <md-error *ngIf="form.get('usergroup_id').hasError('required')">
+            </md-error>
+          </md-radio-group>
+          <button md-raised-button color="primary" id="register" type="submit" [disabled]="this.form.invalid" translate>{{ 'register.submit' | translate }}</button>
+        </form>
+      </md-card-content>
+    </md-card>
+  </div>
+</section>

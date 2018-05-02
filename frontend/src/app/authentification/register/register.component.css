@@ -1,0 +1,91 @@
+md-card {
+  width: 300px;
+}
+
+form > legend {
+  margin: 10px 0;
+}
+
+.loading {
+  height: 128px;
+  width: 150px;
+  background: url('../../../assets/auth-loading.gif');
+  background-position: center;
+  background-size: cover;
+}
+
+.first-group > div, .second-group > div, .third-group > div{
+  display: inline-block;
+  margin: 10px 0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: white;
+  width: 150px;
+  vertical-align: middle;
+}
+
+label[for="usergroup"] {
+  color: gray;
+}
+
+#freelancer-label{
+  background: #c13341;
+}
+
+#company-label{
+  background: #e3894d;
+}
+
+#user-label{
+  background: rgba(0, 0, 0, 0.61);
+}
+
+button {
+  margin-top: 10px;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Montserrat;
+}
+
+button#register {
+  background-color: #42989b;
+}
+
+button#register[disabled] {
+  background-color: #eee;
+}
+
+.pending {
+  width: 16px;
+  height: 16px;
+  float: right;
+  background: url('../../../assets/pending.gif') no-repeat;
+  background-size: cover;
+}
+
+@media(min-width:768px) {
+  md-card {
+    width: 600px;
+  }
+  md-form-field {
+    display: block;
+    width: 80%;
+    margin: 10px 0 30px 0;
+  }
+
+  md-radio-button {
+    max-width: 500px;
+  }
+
+  button {
+    margin: 20px;
+  }
+
+  .first-group > div, .second-group > div, .third-group > div{
+    width: 400px;
+  }
+
+}
+
+
